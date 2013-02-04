@@ -1,74 +1,58 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Mvcbootstrap : Html Helpers for Boostrap" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+</head>
+<body>
+    
+<h2>
+    Index</h2>
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
 
-    <title>Mvcbootstrap</title>
-  </head>
+  	<div id="myModal" class="modal hide fade">
+			
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>Toller Titel</h3>
+			<div>Toller Header</div>
+		</div>
+			
+		<div class="modal-body">
+			<div>Hallo MARIO</div>
+		</div>
+		
+			
+		<div class="modal-footer">
+			<div>Toller Footer</div>
+			<a href="#" class="btn">schließen</a>
+			<a href="#" class="btn btn-primary">speichern</a>
+		</div>
+		
+		</div>
+		
 
-  <body>
+<ul class="nav nav-tabs" id="myTab"><li class="active"><a data-toggle="tab" href="#tab1">Titel 1</a></li><li><a data-toggle="tab" href="#tab2">Titel 2</a></li><li><a data-toggle="tab" href="#tab3">Titel 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab1"><div>Toller Inhalt 1</div></div><div class="tab-pane" id="tab2"><div>Toller Inhalt 2</div></div><div class="tab-pane" id="tab3"><div>Toller Inhalt 3</div></div></div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/judgie79/MvcBootstrap">View on GitHub</a>
 
-          <h1 id="project_title">Mvcbootstrap</h1>
-          <h2 id="project_tagline">Html Helpers for Boostrap</h2>
+<ul class="nav nav-tabs" id="myTab2"><li class="active"><a data-toggle="tab" href="#tab1_1"><div>Toller Nav Inhalt 1</div></a></li><li><a data-toggle="tab" href="#tab1_2"><div>Toller Nav Inhalt 2</div></a></li><li><a data-toggle="tab" href="#tab1_3"><div>Toller Nav Inhalt 3</div></a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab1_1"><div>Toller Inhalt 1</div></div><div class="tab-pane" id="tab1_2"><div>Toller Inhalt 2</div></div><div class="tab-pane" id="tab1_3"><div>Toller Inhalt 3</div></div></div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/judgie79/MvcBootstrap/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/judgie79/MvcBootstrap/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<div class="accordion" id="myAcc"><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-parent="#myAcc" data-toggle="collapse" href="#item1">Titel 1</a></div><div class="in accordion-body collapse" id="item1"><div class="accordion-inner"><div>TollerContent 1</div></div></div></div><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-parent="#myAcc" data-toggle="collapse" href="#item2">Titel 2</a></div><div class="accordion-body collapse" id="item2"><div class="accordion-inner"><div>TollerContent 2</div></div></div></div><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-parent="#myAcc" data-toggle="collapse" href="#item3">Titel 3</a></div><div class="accordion-body collapse" id="item3"><div class="accordion-inner"><div>TollerContent 3</div></div></div></div></div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+<div class="accordion" id="myAcc2"><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-parent="#myAcc2" data-toggle="collapse" href="#item1_1"><div>Toller Header 1</div></a></div><div class="in accordion-body collapse" id="item1_1"><div class="accordion-inner"><div>TollerContent 1</div></div></div></div><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-parent="#myAcc2" data-toggle="collapse" href="#item1_2"><div>Toller Header 2</div></a></div><div class="accordion-body collapse" id="item1_2"><div class="accordion-inner"><div>TollerContent 2</div></div></div></div><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-parent="#myAcc2" data-toggle="collapse" href="#item1_3"><div>Toller Header 3</div></a></div><div class="accordion-body collapse" id="item1_3"><div class="accordion-inner"><div>TollerContent 3</div></div></div></div></div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<i class="icon-download"></i>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<i class="icon-download icon-white"></i>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Mvcbootstrap maintained by <a href="https://github.com/judgie79">judgie79</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
 
     
 
-  </body>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    
+</body>
 </html>
