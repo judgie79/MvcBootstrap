@@ -1,0 +1,13 @@
+﻿@using MvcBootstrap
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+
+@Html.Bootstrap().Modal("myModal", "Toller Titel", "schließen", "speichern").Content(
+@<div>
+    Hallo MARIO
+</div>
+).Header(@<div>TOLLER TITEL OVER</div>).Render()
