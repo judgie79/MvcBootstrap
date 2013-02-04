@@ -2,12 +2,18 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<h2>
+    Index</h2>
 <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+@Html.Bootstrap().Modal("myModal", "Toller Titel", "schließen", "speichern").Header(@<div>Toller Header</div>).Content(@<div>Hallo MARIO</div>).Footer(@<div>Toller Footer</div>).Render()
 
-@Html.Bootstrap().Modal("myModal", "Toller Titel", "schließen", "speichern").Content(
-@<div>
-    Hallo MARIO
-</div>
-).Header(@<div>TOLLER TITEL OVER</div>).Render()
+@(Html.Bootstrap().Tab("myTab")
+    .AddTab("tab1", "Titel 1", "", true, @<div>Toller Inhalt 1</div>)
+    .AddTab("tab2", "Titel 2", "", false, @<div>Toller Inhalt 2</div>)
+    .AddTab("tab3", "Titel 3", "", false, @<div>Toller Inhalt 3</div>).Render())
+
+
+@(Html.Bootstrap().Tab("myTab2")
+    .AddTab("tab1_1", "", true, @<div>Toller Nav Inhalt 1</div>, @<div>Toller Inhalt 1</div>)
+        .AddTab("tab1_2", "", false, @<div>Toller Nav Inhalt 2</div>, @<div>Toller Inhalt 2</div>)
+            .AddTab("tab1_3", "", false, @<div>Toller Nav Inhalt 3</div>, @<div>Toller Inhalt 3</div>).Render())

@@ -8,8 +8,8 @@
     <ProjectGuid>{B33885CF-1AC7-4DC0-990F-A9FD62B1C2CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvcBoostrap</RootNamespace>
-    <AssemblyName>MvcBoostrap</AssemblyName>
+    <RootNamespace>MvcBootstrap</RootNamespace>
+    <AssemblyName>MvcBootstrap</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
     <Compile Include="Controls\Modal.cs" />
+    <Compile Include="Controls\Tab.cs" />
     <Compile Include="HtmlBootstrapExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
