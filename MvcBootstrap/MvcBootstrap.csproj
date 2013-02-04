@@ -70,6 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
+    <Compile Include="Controls\Accordion.cs" />
+    <Compile Include="Controls\Icon.cs" />
     <Compile Include="Controls\Modal.cs" />
     <Compile Include="Controls\Tab.cs" />
     <Compile Include="HtmlBootstrapExtensions.cs" />

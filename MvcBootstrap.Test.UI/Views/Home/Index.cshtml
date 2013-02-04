@@ -2,18 +2,152 @@
 @{
     ViewBag.Title = "Index";
 }
-<h2>
-    Index</h2>
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
-@Html.Bootstrap().Modal("myModal", "Toller Titel", "schließen", "speichern").Header(@<div>Toller Header</div>).Content(@<div>Hallo MARIO</div>).Footer(@<div>Toller Footer</div>).Render()
+<div class="hero-unit">
+    <h1>
+        MVC Bootstrap</h1>
+    <h2>
+        HTML Helpers for Twitter Bootstrap</h2>
+</div>
+<div>
+    <h3>
+        Modal Popup</h3>
+    <div>
+        <h4>
+            Code</h4>
+        <pre>
+                @Html.Raw(Html.Encode("<a href=\"#myModal\" role=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\">Launch demo modal</a>"))
 
-@(Html.Bootstrap().Tab("myTab")
-    .AddTab("tab1", "Titel 1", "", true, @<div>Toller Inhalt 1</div>)
-    .AddTab("tab2", "Titel 2", "", false, @<div>Toller Inhalt 2</div>)
-    .AddTab("tab3", "Titel 3", "", false, @<div>Toller Inhalt 3</div>).Render())
-
-
-@(Html.Bootstrap().Tab("myTab2")
-    .AddTab("tab1_1", "", true, @<div>Toller Nav Inhalt 1</div>, @<div>Toller Inhalt 1</div>)
-        .AddTab("tab1_2", "", false, @<div>Toller Nav Inhalt 2</div>, @<div>Toller Inhalt 2</div>)
-            .AddTab("tab1_3", "", false, @<div>Toller Nav Inhalt 3</div>, @<div>Toller Inhalt 3</div>).Render())
+                @Html.Raw(Html.Encode("@Html.Bootstrap().Modal(\"myModal\", \"Toller Titel\", \"schließen\", \"speichern\").Header(@<div>Toller Header</div>).Content(@<div>Hallo MARIO</div>).Footer(@<div>Toller Footer</div>).Render()"))
+        </pre>
+    </div>
+    <div>
+        <h4>
+            Output</h4>
+        <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Launch
+            demo modal</a>
+        @Html.Bootstrap().Modal("myModal", "Toller Titel", "schließen", "speichern").Header(@<div>
+            Toller Header</div>).Content(@<div>
+                Hallo MARIO</div>).Footer(@<div>
+                    Toller Footer</div>).Render()
+    </div>
+</div>
+<hr />
+<div>
+    <h3>
+        Tabs with default title</h3>
+    <div>
+        <h4>
+            Code</h4>
+        <pre>
+            @Html.Raw(Html.Encode(@"@(Html.Bootstrap().Tab(""myTab"")
+            .AddTab(""tab1"", ""Titel 1"", """", true, @<div>Toller Inhalt 1</div>)
+            .AddTab(""tab2"", ""Titel 2"", """", false, @<div>Toller Inhalt 2</div>)
+            .AddTab(""tab3"", ""Titel 3"", """", false, @<div>Toller Inhalt 3</div>).Render())"))
+        </pre>
+    </div>
+    <div>
+        <h4>
+            Output</h4>
+        @(Html.Bootstrap().Tab("myTab")
+    .AddTab("tab1", "Titel 1", "", true, @<div>
+        Toller Inhalt 1</div>)
+    .AddTab("tab2", "Titel 2", "", false, @<div>
+        Toller Inhalt 2</div>)
+    .AddTab("tab3", "Titel 3", "", false, @<div>
+        Toller Inhalt 3</div>).Render())
+    </div>
+    <h3>
+        Tabs with custome title template</h3>
+    <div>
+        <h4>
+            Code</h4>
+        <pre>
+            @Html.Raw(Html.Encode(@"@(Html.Bootstrap().Tab(""myTab"")
+            .AddTab(""tab1_1"", """", true, @<div>Toller Nav Inhalt 1</div>, @<div>Toller Inhalt 1</div>)
+            .AddTab(""tab1_2"", """", false, @<div>Toller Nav Inhalt 2</div>, @<div>Toller Inhalt 2</div>)
+            .AddTab(""tab1_3"", """", false, @<div>Toller Nav Inhalt 3</div>, @<div>Toller Inhalt 3</div>).Render())"))
+        </pre>
+        @(Html.Bootstrap().Tab("myTab2")
+    .AddTab("tab1_1", "", true, @<div>
+        Toller Nav Inhalt 1</div>, @<div>
+            Toller Inhalt 1</div>)
+        .AddTab("tab1_2", "", false, @<div>
+            Toller Nav Inhalt 2</div>, @<div>
+                Toller Inhalt 2</div>)
+            .AddTab("tab1_3", "", false, @<div>
+                Toller Nav Inhalt 3</div>, @<div>
+                    Toller Inhalt 3</div>).Render())
+    </div>
+</div>
+<hr />
+<div>
+    <h3>
+        Accordion with default title</h3>
+    <div>
+        <h4>
+            Code</h4>
+        <pre>
+                @Html.Raw(Html.Encode(@"@(Html.Bootstrap().Accordion(""myAcc"")
+                .AddItem(""item1"", true, ""Titel 1"", @<div>TollerContent 1</div>)
+                .AddItem(""item2"", false, ""Titel 2"", @<div>TollerContent 2</div>)
+                .AddItem(""item3"", false, ""Titel 3"", @<div>TollerContent 3</div>).Render())"))
+        </pre>
+    </div>
+    <div>
+        <h4>
+            Output</h4>
+        @(Html.Bootstrap().Accordion("myAcc")
+    .AddItem("item1", true, "Titel 1", @<div>
+        TollerContent 1</div>)
+    .AddItem("item2", false, "Titel 2", @<div>
+        TollerContent 2</div>)
+    .AddItem("item3", false, "Titel 3", @<div>
+        TollerContent 3</div>).Render())
+    </div>
+    <h3>
+        Accordion with custom title template</h3>
+    <div>
+        <h4>
+            Code</h4>
+        <pre>
+                @Html.Raw(Html.Encode(@"@(Html.Bootstrap().Accordion(""myAcc"")
+                .AddItem(""item1"", true, @<div>Toller Header 1</div, @<div>TollerContent 1</div>)
+                .AddItem(""item2"", false, @<div>Toller Header 2</div, @<div>TollerContent 2</div>)
+                .AddItem(""item3"", false, @<div>Toller Header 3</div, @<div>TollerContent 3</div>).Render())"))
+        </pre>
+    </div>
+    <div>
+        <h4>
+            Output</h4>
+        @(Html.Bootstrap().Accordion("myAcc2")
+    .AddItem("item1_1", true, @<div>
+        Toller Header 1</div>, @<div>
+            TollerContent 1</div>)
+            .AddItem("item1_2", false, @<div>
+                Toller Header 2</div>, @<div>
+                    TollerContent 2</div>)
+                .AddItem("item1_3", false, @<div>
+                    Toller Header 3</div>, @<div>
+                        TollerContent 3</div>).Render())
+    </div>
+</div>
+<hr />
+<div>
+    <h3>
+        Icons</h3>
+    <div>
+        <h4>
+            Code</h4>
+        <pre>
+            @Html.Raw(Html.Encode("@Html.Bootstrap().Icon(MvcBootstrap.Controls.Icon.Icons.Download)"))
+            @Html.Raw(Html.Encode("@Html.Bootstrap().Icon(MvcBootstrap.Controls.Icon.Icons.Download, MvcBootstrap.Controls.Icon.Color.White)"))
+        </pre>
+    </div>
+    <div>
+        <h4>
+            Output</h4>
+        @Html.Bootstrap().Icon(MvcBootstrap.Controls.Icon.Icons.Download)
+        @Html.Bootstrap().Icon(MvcBootstrap.Controls.Icon.Icons.Download, MvcBootstrap.Controls.Icon.Color.White)
+    </div>
+</div>
+</div> 

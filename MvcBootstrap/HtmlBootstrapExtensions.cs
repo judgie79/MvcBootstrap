@@ -48,6 +48,8 @@ namespace MvcBootstrap
 			return new Modal(id, title, closeBtnTitle, saveBtnTitle);
 		}
 
+
+
 		public static Tab Tab(this Bootstrap htmlHelper, string id)
 		{
 			return new Tab(id);
@@ -56,6 +58,21 @@ namespace MvcBootstrap
 		public static Tab Tab(this Bootstrap htmlHelper, string id, string navCssClasses)
 		{
 			return new Tab(id, navCssClasses);
+		}
+
+		public static Accordion Accordion(this Bootstrap htmlHelper, string id)
+		{
+			return new Accordion(id);
+		}
+
+		public static MvcHtmlString Icon(this Bootstrap htmlHelper, Icon.Icons icon)
+		{
+			return new Icon(icon).Render();
+		}
+
+		public static MvcHtmlString Icon(this Bootstrap htmlHelper, Icon.Icons icon, Icon.Color color)
+		{
+			return new Icon(icon, color).Render();
 		}
 	}
 }
