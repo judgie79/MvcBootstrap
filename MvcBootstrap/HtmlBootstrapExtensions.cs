@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using MvcBootstrap.Controls;
+using System.Linq.Expressions;
 
 namespace MvcBootstrap
 {
@@ -20,8 +21,19 @@ namespace MvcBootstrap
 		/// <returns></returns>
 		public static Bootstrap Bootstrap(this HtmlHelper htmlHelper)
 		{
-			return new Bootstrap();
+			return new Bootstrap(htmlHelper);
 		}
+
+		/// <summary>
+		/// Encapsulating all bootstrap helpers (@Html.Bootstrap().*)
+		/// </summary>
+		/// <param name="htmlHelper"></param>
+		/// <returns></returns>
+		public static Bootstrap<TModel> Bootstrap<TModel>(this HtmlHelper<TModel> htmlHelper)
+		{
+			return new Bootstrap<TModel>(htmlHelper);
+		}
+
 
 		/// <summary>
 		/// Adds the Modal extension to the Bootstrap class
@@ -48,8 +60,6 @@ namespace MvcBootstrap
 			return new Modal(id, title, closeBtnTitle, saveBtnTitle);
 		}
 
-
-
 		public static Tab Tab(this Bootstrap htmlHelper, string id)
 		{
 			return new Tab(id);
@@ -73,6 +83,11 @@ namespace MvcBootstrap
 		public static MvcHtmlString Icon(this Bootstrap htmlHelper, Icon.Icons icon, Icon.Color color)
 		{
 			return new Icon(icon, color).Render();
+		}
+
+		public static MvcHtmlString FormControlGroupFor<TModel, TValue>(this Bootstrap<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression)
+		{
+			return new FormControlGroupFor<TModel, TValue>(htmlHelper.Helper, expression).Render();
 		}
 	}
 }

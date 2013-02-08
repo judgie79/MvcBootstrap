@@ -1,4 +1,7 @@
-﻿@using MvcBootstrap
+﻿@model MvcBootstrap.Test.UI.Models.TestModel
+
+
+@using MvcBootstrap
 @{
     ViewBag.Title = "Index";
 }
@@ -150,4 +153,25 @@
         @Html.Bootstrap().Icon(MvcBootstrap.Controls.Icon.Icons.Download, MvcBootstrap.Controls.Icon.Color.White)
     </div>
 </div>
-</div> 
+
+<hr />
+
+<div>
+    <h3>
+        Formulare</h3>
+    <div>
+        <h4>
+            Code</h4>
+        <pre>
+            @Html.Raw(Html.Encode("@Html.Bootstrap().FormControlGroupFor(model => model.Name)"))
+        </pre>
+    </div>
+    <div>
+        <h4>
+            Output</h4>
+        <form class="form-horizontal">
+        @Html.Bootstrap().FormControlGroupFor(model => model.Name)
+        </form>
+    </div>
+
+</div>
